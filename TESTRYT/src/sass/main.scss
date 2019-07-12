@@ -1,11 +1,91 @@
 @import '_bootstrap';
 @import 'vars';
 @import 'fonts';
+
+@keyframes slider {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
-    background-color: rgb(255, 255, 255)
+    background-image: linear-gradient(to right top, #404853, #46566e, #4e638a, #5970a6, #687cc2);
+
+    .wrapper {
+        max-width: 1300px;
+        height: 100vh;
+        margin: 0 auto;
+        padding-top: 100px;
+
+        &-heading {
+            display: flex;
+            justify-content: center;
+            &__text {
+                text-align: center;
+                color: rgb(255, 255, 255);
+                width: 700px;
+            }
+        }
+        &-functional {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 100px;
+            &__box {
+                align-self: center;
+            }
+            &__page {
+                border-left: 3px solid rgb(141, 135, 135);
+
+                img {
+                    opacity: 0;
+                    display: none;
+                }
+            }
+  
+            &__text {
+                color: rgb(163, 161, 161);
+                padding-left: 10px;
+                user-select: none;
+            }
+
+            & .UP {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            &__white {
+                width: 220px;
+                height: 40px;
+                background-color: white;
+                border: none;
+            }
+
+            &__page:hover {
+                border-left: 3px solid white;
+                cursor: pointer;
+            }
+            &__page:hover p {
+                color: white;
+            } 
+            &__car {
+                width: 700px;
+                height: 500px;
+
+                > .target {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 0px;
+                        
+                    }
+                }
+            }
+        }
+    }
 }
 @import 'media';
-
-
-
     
